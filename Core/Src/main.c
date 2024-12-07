@@ -24,7 +24,7 @@ uint8_t animation_step = 0;          // Tracks current animation step
 
 /* Constants -----------------------------------------------------------------*/
 #define DEBOUNCE_DELAY 50            // Debounce delay in ms
-const uint32_t animation_delays[] = {500, 300, 50}; // Adjustable delays for each LED transition (in ms)
+const uint32_t animation_delays[] = {500, 300, 150}; // Adjustable delays for each LED transition (in ms)
 #define NUM_ANIMATION_STEPS (sizeof(animation_delays) / sizeof(animation_delays[0]))
 
 /**
