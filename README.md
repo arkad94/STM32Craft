@@ -1,4 +1,3 @@
-Here's the updated version of your README.md with a more neutral tone for the `HAL_Delay` point and a specific suggestion to try `PB0` instead of a general recommendation to explore other pins:
 
 ---
 
