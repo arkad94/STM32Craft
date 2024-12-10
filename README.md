@@ -1,5 +1,3 @@
-Here’s a polished and aesthetically formatted version of your `README.md`:
-
 # STM32H7 Microcontroller Learning Workspace
 
 Welcome to my repository! This is a dedicated workspace for learning and experimenting with the STM32H754ZI Nucleo board. Below are the details of the projects I’ve worked on so far, each focusing on a specific aspect of microcontroller programming.
