@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="selection" value="LEDBuffer[pos++]"/>
+		<item key="wrap" value="true"/>
+		<item key="casesensitive" value="false"/>
+		<item key="wholeword" value="false"/>
+		<item key="incremental" value="false"/>
+		<item key="isRegEx" value="false"/>
+		<list key="findhistory">
+			<item value="LEDBuffer[pos++]"/>
+			<item value="PA7"/>
+			<item value="HAL_TIM_PWM_Stop(&amp;htim3, TIM_CHANNEL_2);&#x0A;HAL_GPIO_WritePin(GPIOA, GPIO_PIN_7, GPIO_PIN_RESET); // Assuming PA7 is the pin&#x0A;HAL_Delay(1); // Minimum reset delay&#x0A;"/>
+			<item value="HAL_Delay(1); // Small delay for bit timing"/>
+			<item value="SystemClock_Config"/>
+			<item value="HAL_Delay(50)"/>
+			<item value="YKW"/>
+		</list>
+		<list key="replacehistory">
+			<item value="while (__HAL_TIM_GET_FLAG(&amp;htim3, TIM_FLAG_UPDATE) == RESET); // Wait for timer update event&#x0A;__HAL_TIM_CLEAR_FLAG(&amp;htim3, TIM_FLAG_UPDATE)"/>
+			<item value="while (__HAL_TIM_GET_FLAG(&amp;htim3, TIM_FLAG_UPDATE) == RESET); // Wait for timer update event&#x0A;__HAL_TIM_CLEAR_FLAG(&amp;htim3, TIM_FLAG_UPDATE);&#x0A;"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="905"/>
+		<item key="DIALOG_Y_ORIGIN" value="201"/>
+		<item key="DIALOG_WIDTH" value="318"/>
+		<item key="DIALOG_HEIGHT" value="358"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-36|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+</section>

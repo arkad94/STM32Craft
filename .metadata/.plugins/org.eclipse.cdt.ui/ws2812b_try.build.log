@@ -1,0 +1,32 @@
+20:52:33 **** Incremental Build of configuration Debug for project ws2812b_try ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_PWR_LDO_SUPPLY -DUSE_NUCLEO_64 -DUSE_HAL_DRIVER -DSTM32H753xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/BSP/STM32H7xx_Nucleo -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:82:3: warning: implicit declaration of function 'SystemClock_Config'; did you mean 'SysTick_Config'? [-Wimplicit-function-declaration]
+   82 |   SystemClock_Config();
+      |   ^~~~~~~~~~~~~~~~~~
+      |   SysTick_Config
+../Core/Src/main.c:93:19: warning: variable 'BspCOMInit' set but not used [-Wunused-but-set-variable]
+   93 |   COM_InitTypeDef BspCOMInit;
+      |                   ^~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:122:6: warning: conflicting types for 'SystemClock_Config'; have 'void(void)'
+  122 | void SystemClock_Config(void)
+      |      ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:82:3: note: previous implicit declaration of 'SystemClock_Config' with type 'void(void)'
+   82 |   SystemClock_Config();
+      |   ^~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "ws2812b_try.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\paran\Desktop\Wonder\STM32_Craft\ws2812b_try\STM32H753ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ws2812b_try.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ws2812b_try.elf
+ 
+arm-none-eabi-size  ws2812b_try.elf 
+arm-none-eabi-objdump -h -S ws2812b_try.elf  > "ws2812b_try.list"
+   text	   data	    bss	    dec	    hex	filename
+  23304	     28	   2692	  26024	   65a8	ws2812b_try.elf
+Finished building: default.size.stdout
+ 
+Finished building: ws2812b_try.list
+ 
+
+20:52:34 Build Finished. 0 errors, 3 warnings. (took 956ms)
+

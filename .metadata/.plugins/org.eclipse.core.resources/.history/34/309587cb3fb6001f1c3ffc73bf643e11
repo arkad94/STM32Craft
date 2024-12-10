@@ -1,0 +1,113 @@
+#include "main.h"
+#include "tim.h"
+#include "gpio.h"
+#include "usart.h" // Include for UART
+#include <string.h> // For memset
+#include <stdio.h>  // For snprintf
+
+// Constants for WS2812B timing
+#define T1H_DUTY 44  // "1" High: ~67% of ARR (ARR = 68 for 800kHz)
+#define T0H_DUTY 22  // "0" High: ~33% of ARR
+#define RESET_DELAY 50 // WS2812B reset delay in microseconds
+#define NUM_LEDS 16
+
+// GRB color data for WS2812B (16 LEDs × 3 bytes)
+uint8_t LED_Data[NUM_LEDS * 3] = {0}; // All LEDs off initially
+
+// Function to send WS2812 data via PWM
+void WS2812_Send(uint8_t *data, uint16_t length) {
+    for (uint16_t i = 0; i < length; i++) {
+        for (int8_t bit = 7; bit >= 0; bit--) {
+            if (data[i] & (1 << bit)) {
+                // Send "1" (T1H: 67% duty cycle)
+                __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_2, T1H_DUTY);
+            } else {
+                // Send "0" (T0H: 33% duty cycle)
+                __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_2, T0H_DUTY);
+            }
+            // Wait for one PWM period (1.25 µs for 800 kHz)
+            while (__HAL_TIM_GET_COUNTER(&htim3) < htim3.Init.Period);
+        }
+    }
+
+    // Reset signal: Hold line low for 50 µs
+    __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_2, 0); // Set PWM duty cycle to 0
+    HAL_Delay(RESET_DELAY); // Delay to reset the WS2812 LEDs
+}
+
+// Function to print PWM info via UART
+void Print_PWM_Info(void) {
+    char buffer[100];
+    uint32_t timer_freq = HAL_RCC_GetPCLK1Freq(); // Timer clock frequency
+    uint32_t pwm_freq = timer_freq / (htim3.Init.Prescaler + 1) / (htim3.Init.Period + 1);
+    uint32_t ton = (htim3.Instance->CCR2 * 1000000) / pwm_freq; // TON in microseconds
+    uint32_t toff = ((htim3.Init.Period - htim3.Instance->CCR2) * 1000000) / pwm_freq; // TOFF in microseconds
+    uint32_t duty_cycle = (htim3.Instance->CCR2 * 100) / htim3.Init.Period; // Duty cycle in percentage
+
+    snprintf(buffer, sizeof(buffer),
+             "PWM Frequency: %lu Hz\nTON: %lu us\nTOFF: %lu us\nDuty Cycle: %lu%%\n",
+             pwm_freq, ton, toff, duty_cycle);
+    HAL_UART_Transmit(&huart2, (uint8_t *)buffer, strlen(buffer), HAL_MAX_DELAY);
+}
+
+int main(void) {
+    HAL_Init();
+    SystemClock_Config();
+    MX_GPIO_Init();
+    MX_TIM3_Init();
+    MX_USART2_UART_Init(); // Initialize USART2
+
+    HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_2);  // Start PWM on TIM3 Channel 2
+
+    // Set the first LED to red (GRB = 0xFF0000)
+    memset(LED_Data, 0, sizeof(LED_Data)); // Turn off all LEDs
+    LED_Data[0] = 0x00;  // Green
+    LED_Data[1] = 0xFF;  // Red (maximum brightness)
+    LED_Data[2] = 0x00;  // Blue
+
+    while (1) {
+        WS2812_Send(LED_Data, sizeof(LED_Data)); // Send the LED data continuously
+        Print_PWM_Info(); // Print PWM information
+        HAL_Delay(1000); // 1-second delay for stability
+    }
+}
+
+void SystemClock_Config(void) {
+    RCC_OscInitTypeDef RCC_OscInitStruct = {0};
+    RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+
+    HAL_PWREx_ConfigSupply(PWR_LDO_SUPPLY);
+    __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE2);
+
+    while (!__HAL_PWR_GET_FLAG(PWR_FLAG_VOSRDY)) {}
+
+    RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
+    RCC_OscInitStruct.HSEState = RCC_HSE_BYPASS;
+    RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
+    RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
+    RCC_OscInitStruct.PLL.PLLM = 1;
+    RCC_OscInitStruct.PLL.PLLN = 108;
+    RCC_OscInitStruct.PLL.PLLP = 2;
+    RCC_OscInitStruct.PLL.PLLQ = 2;
+    RCC_OscInitStruct.PLL.PLLR = 2;
+    if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK) {
+        Error_Handler();
+    }
+
+    RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_SYSCLK |
+                                  RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2;
+    RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
+    RCC_ClkInitStruct.AHBCLKDivider = RCC_HCLK_DIV1;
+    RCC_ClkInitStruct.APB1CLKDivider = RCC_APB1_DIV1;
+    RCC_ClkInitStruct.APB2CLKDivider = RCC_APB2_DIV1;
+
+    if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_5) != HAL_OK) {
+        Error_Handler();
+    }
+}
+
+void Error_Handler(void) {
+    __disable_irq();
+    while (1) {
+    }
+}

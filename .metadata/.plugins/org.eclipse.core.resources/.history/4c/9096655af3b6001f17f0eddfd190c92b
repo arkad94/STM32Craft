@@ -1,0 +1,91 @@
+#include "main.h"
+#include "tim.h"
+#include "gpio.h"
+#include <string.h> // For memset
+
+#define NUM_LEDS 16
+uint8_t LED_Data[NUM_LEDS * 3] = {0}; // GRB data for 16 LEDs (each LED = 3 bytes)
+
+// Function to send WS2812B data via PWM
+void WS2812_Send(uint8_t *data, uint16_t length) {
+    for (uint16_t i = 0; i < length; i++) {
+        for (int8_t bit = 7; bit >= 0; bit--) {
+            if (data[i] & (1 << bit)) {
+                // Send "1" (64% duty cycle for T1H)
+                __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_2, 64);
+            } else {
+                // Send "0" (32% duty cycle for T0H)
+                __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_2, 32);
+            }
+
+            // Wait for the timer update event (end of current bit)
+            while (__HAL_TIM_GET_FLAG(&htim3, TIM_FLAG_UPDATE) == RESET);
+            __HAL_TIM_CLEAR_FLAG(&htim3, TIM_FLAG_UPDATE);
+        }
+    }
+
+    // Reset signal: Hold low for >50µs
+    HAL_TIM_PWM_Stop(&htim3, TIM_CHANNEL_2);  // Stop PWM output
+    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_5, GPIO_PIN_RESET); // Pull PB5 low
+    HAL_Delay(1); // 1 ms delay ensures >50 µs reset time
+}
+
+int main(void) {
+    HAL_Init();
+    SystemClock_Config();
+    MX_GPIO_Init();
+    MX_TIM3_Init();
+
+    // Initialize TIM3 PWM on PB5 (TIM3 Channel 2)
+    HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_2);
+
+    // Set the first LED to red (GRB = 0xFF0000)
+    memset(LED_Data, 0, sizeof(LED_Data)); // Turn off all LEDs
+    LED_Data[0] = 0x00;  // Green
+    LED_Data[1] = 0xFF;  // Red (maximum brightness)
+    LED_Data[2] = 0x00;  // Blue
+
+    // Send data to LEDs once
+    WS2812_Send(LED_Data, sizeof(LED_Data));
+
+    // Infinite loop: No need to continuously resend data
+    while (1) {
+        // Do nothing, LED state is retained until updated
+    }
+}
+
+void SystemClock_Config(void) {
+    RCC_OscInitTypeDef RCC_OscInitStruct = {0};
+    RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+
+    HAL_PWREx_ConfigSupply(PWR_LDO_SUPPLY);
+    __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE2);
+
+    while (!__HAL_PWR_GET_FLAG(PWR_FLAG_VOSRDY)) {}
+
+    RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
+    RCC_OscInitStruct.HSIState = RCC_HSI_DIV1;
+    RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
+    RCC_OscInitStruct.PLL.PLLState = RCC_PLL_NONE;
+    if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK) {
+        Error_Handler();
+    }
+
+    RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_SYSCLK | RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2;
+    RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_HSI;
+    RCC_ClkInitStruct.SYSCLKDivider = RCC_SYSCLK_DIV1;
+    RCC_ClkInitStruct.AHBCLKDivider = RCC_HCLK_DIV1;
+    RCC_ClkInitStruct.APB1CLKDivider = RCC_APB1_DIV1;
+    RCC_ClkInitStruct.APB2CLKDivider = RCC_APB2_DIV1;
+
+    if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_1) != HAL_OK) {
+        Error_Handler();
+    }
+}
+
+void Error_Handler(void) {
+    __disable_irq();
+    while (1) {
+    }
+}
+

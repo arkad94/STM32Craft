@@ -1,0 +1,5 @@
+../Core/Src/main.c:36:6:WS2812_SetColor	24	static
+../Core/Src/main.c:48:6:WS2812_Refresh	32	static
+../Core/Src/main.c:76:5:main	32	static
+../Core/Src/main.c:122:6:SystemClock_Config	120	static
+../Core/Src/main.c:157:6:Error_Handler	4	static
