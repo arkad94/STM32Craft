@@ -52,8 +52,8 @@ Drive a WS2812B LED to light up the first LED in blue using PWM and DMA.
 
 1. **Clone the Repository**  
    ```bash
-   git clone https://github.com/yourusername/your-repo-name.git
-   cd your-repo-name
+   git clone https://github.com/arkad94/STM32Craft
+   cd STM32Craft
    ```
 
 2. **Prerequisites:**  
