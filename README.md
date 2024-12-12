@@ -5,10 +5,15 @@ Welcome to my repository! This is a dedicated workspace for learning and experim
 ---
 
 ## Table of Contents
-1. [Overview](#overview)
-2. [Projects](#projects)
-   - [Project 1: Onboard LED Control](#project-1-onboard-led-control)
-   - [Project 2: WS2812B LED Control](#project-2-ws2812b-led-control)
+- [STM32H7 Microcontroller Learning Workspace](#stm32h7-microcontroller-learning-workspace)
+  - [Table of Contents](#table-of-contents)
+  - [Overview](#overview)
+  - [Projects](#projects)
+    - [Project 1: Onboard LED Control](#project-1-onboard-led-control)
+    - [Project 2: WS2812B LED Control](#project-2-ws2812b-led-control)
+  - [Getting Started](#getting-started)
+  - [Notes and Tips](#notes-and-tips)
+  - [Gamma Correction](#gamma-correction)
 3. [Getting Started](#getting-started)
 4. [Notes and Tips](#notes-and-tips)
 
@@ -43,8 +48,18 @@ Drive a WS2812B LED to light up the first LED in blue using PWM and DMA.
 - Verified the timing to ensure compatibility with WS2812B protocol.
 
 **Behavior:**  
-- Upon flashing, the first LED lights up **Blue**.
+- Upon flashing, the first LED lights up at best equivalent of **#FFAA1D**.
 - If the LED does not turn on, press the reset button on the board.
+
+**Gamma Correction**
+
+Gamma correction is a technique used to improve the color accuracy of LEDs by adjusting their brightness levels to match the way human eyes perceive light. Hex codes represent RGB values linearly, but human vision perceives light logarithmically. Without gamma correction, the perceived brightness of LEDs can appear inaccurate, especially for mid-range and dimmer colors. In this project, gamma correction is applied to the RGB values of the WS2812B LEDs before sending them to the LED strip. The formula used for gamma correction is:
+
+`Corrected Value = (Original Value / 255) ^ gamma * 255`
+
+where `gamma` is set to 2.2, a standard value for most displays and LEDs.
+
+By implementing gamma correction, the displayed colors appear closer to the intended ones, especially for dimmer shades. This update was added on December 12th, to enhance the visual output and improve the realism of the colors displayed by the WS2812B LED strip.
 
 ---
 
@@ -72,5 +87,4 @@ Drive a WS2812B LED to light up the first LED in blue using PWM and DMA.
 
 - **Project 2 Troubleshooting:** If the WS2812B LED does not turn on after flashing, press the **Reset** button on the STM32H754ZI board.
 - This repository is a work in progress. Stay tuned for more projects as I delve deeper into STM32 programming!
-
 
