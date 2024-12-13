@@ -1,4 +1,4 @@
-18:27:04 **** Incremental Build of configuration Debug for project ws2812b_try ****
+23:40:25 **** Incremental Build of configuration Debug for project ws2812b_try ****
 make -j16 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_PWR_LDO_SUPPLY -DUSE_NUCLEO_64 -DUSE_HAL_DRIVER -DSTM32H753xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/BSP/STM32H7xx_Nucleo -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
 ../Core/Src/main.c: In function 'main':
@@ -6,12 +6,9 @@ arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -D
    91 |     SystemClock_Config();
       |     ^~~~~~~~~~~~~~~~~~
       |     SysTick_Config
-../Core/Src/main.c:102:21: warning: variable 'BspCOMInit' set but not used [-Wunused-but-set-variable]
-  102 |     COM_InitTypeDef BspCOMInit;
-      |                     ^~~~~~~~~~
 ../Core/Src/main.c: At top level:
-../Core/Src/main.c:130:6: warning: conflicting types for 'SystemClock_Config'; have 'void(void)'
-  130 | void SystemClock_Config(void)
+../Core/Src/main.c:142:6: warning: conflicting types for 'SystemClock_Config'; have 'void(void)'
+  142 | void SystemClock_Config(void)
       |      ^~~~~~~~~~~~~~~~~~
 ../Core/Src/main.c:91:5: note: previous implicit declaration of 'SystemClock_Config' with type 'void(void)'
    91 |     SystemClock_Config();
@@ -22,11 +19,11 @@ Finished building target: ws2812b_try.elf
 arm-none-eabi-size  ws2812b_try.elf 
 arm-none-eabi-objdump -h -S ws2812b_try.elf  > "ws2812b_try.list"
    text	   data	    bss	    dec	    hex	filename
-  31304	    108	   3004	  34416	   8670	ws2812b_try.elf
+  31176	     96	   3000	  34272	   85e0	ws2812b_try.elf
 Finished building: default.size.stdout
  
 Finished building: ws2812b_try.list
  
 
-18:27:05 Build Finished. 0 errors, 3 warnings. (took 904ms)
+23:40:27 Build Finished. 0 errors, 2 warnings. (took 2s.66ms)
 

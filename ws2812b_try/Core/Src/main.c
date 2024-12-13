@@ -95,33 +95,45 @@ int main(void)
     MX_DMA_Init();
     MX_TIM3_Init();
 
-    /* Initialize USER push-button */
-    BSP_PB_Init(BUTTON_USER, BUTTON_MODE_EXTI);
-
-    /* Initialize COM1 port */
-    COM_InitTypeDef BspCOMInit;
-    BspCOMInit.BaudRate   = 115200;
-    BspCOMInit.WordLength = COM_WORDLENGTH_8B;
-    BspCOMInit.StopBits   = COM_STOPBITS_1;
-    BspCOMInit.Parity     = COM_PARITY_NONE;
-    BspCOMInit.HwFlowCtl  = COM_HWCONTROL_NONE;
-
-    /* Demonstrate LED Control */
-    // Clear all LEDs
-    for (int i = 0; i < NUM_LEDS; i++) {
-        WS2812_SetColor(i, 0, 0, 0);
-    }
-
-    // Set first LED to color with gamma correction
-    WS2812_SetColor(0, 0xAA, 0xFF, 0x1D);  // GRB order
-    WS2812_Refresh();
+    /* Define LED colors */
+    uint8_t redShade[3] = {0x40, 0x00, 0x00};   // Shade of red (GRB format)
+    uint8_t currentColor[3] = {0x6B, 0x00, 0x3C}; // Current color (GRB format)
+    uint8_t greenShade[3] = {0x00, 0x40, 0x00}; // Shade of green (GRB format)
 
     /* Infinite loop */
     while (1)
     {
-        HAL_Delay(1000);  // 1-second delay
+        // Loop through cycles with different delays
+        for (float delay = 1.0; delay >= 0.25; delay /= 2)
+        {
+            // Loop through all LEDs
+            for (int i = 0; i < NUM_LEDS; i++)
+            {
+                // Set LED color based on position
+                if (i % 3 == 0)
+                    WS2812_SetColor(i, redShade[0], redShade[1], redShade[2]);
+                else if (i % 3 == 1)
+                    WS2812_SetColor(i, currentColor[0], currentColor[1], currentColor[2]);
+                else
+                    WS2812_SetColor(i, greenShade[0], greenShade[1], greenShade[2]);
+
+                // Refresh LED strip
+                WS2812_Refresh();
+                HAL_Delay((int)(delay * 1000)); // Delay in milliseconds
+            }
+
+            // Clear all LEDs after a full cycle
+            for (int i = 0; i < NUM_LEDS; i++)
+            {
+                WS2812_SetColor(i, 0, 0, 0); // Turn off LED
+            }
+            WS2812_Refresh();
+            HAL_Delay((int)(delay * 1000)); // Add a gap before the next cycle
+        }
     }
 }
+
+
 
 /**
   * @brief System Clock Configuration
