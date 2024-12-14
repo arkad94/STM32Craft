@@ -731,3 +731,491 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
 !ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-12-13 19:52:35.935
 !MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2024-12-14 15:31:30.014 -----------------------------------------------
+eclipse.buildId=Version 1.17.0
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2024-12-14 15:31:34.190
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-12-14 15:31:47.276
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-12-14 15:31:47.277
+!MESSAGE Log4j2 initialized with config file C:\Users\paran\Desktop\Wonder\STM32_Craft\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-12-14 15:31:54.309
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-12-14 16:27:28.738
+!MESSAGE Indexed 'WS2812B_SPI_Control' (27 sources, 90 headers) in 4.46 sec: 8,643 declarations; 65,468 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0027%)
+
+!ENTRY org.eclipse.core.jobs 4 2 2024-12-14 17:14:20.104
+!MESSAGE An internal error occurred during: "Launching WS2812B_SPI_Control.elf".
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.eclipse.cdt.core.model.ICProject.getProject()" because the return value of "org.eclipse.cdt.debug.core.CDebugUtils.getCProject(org.eclipse.debug.core.ILaunchConfiguration)" is null
+	at com.st.stm32cube.ide.mcu.toolchain.ui.ToolChainHelper.validateDebugLaunch(ToolChainHelper.java:38)
+	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.preLaunchCheck(DSFDelegate.java:100)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:769)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 4 2 2024-12-14 17:14:27.375
+!MESSAGE An internal error occurred during: "Launching WS2812B_SPI_Control.elf".
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.eclipse.cdt.core.model.ICProject.getProject()" because the return value of "org.eclipse.cdt.debug.core.CDebugUtils.getCProject(org.eclipse.debug.core.ILaunchConfiguration)" is null
+	at com.st.stm32cube.ide.mcu.toolchain.ui.ToolChainHelper.validateDebugLaunch(ToolChainHelper.java:38)
+	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.preLaunchCheck(DSFDelegate.java:100)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:769)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 4 2 2024-12-14 17:15:51.856
+!MESSAGE An internal error occurred during: "Launching WS2812B_SPI_Control.elf".
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.eclipse.cdt.core.model.ICProject.getProject()" because the return value of "org.eclipse.cdt.debug.core.CDebugUtils.getCProject(org.eclipse.debug.core.ILaunchConfiguration)" is null
+	at com.st.stm32cube.ide.mcu.toolchain.ui.ToolChainHelper.validateDebugLaunch(ToolChainHelper.java:38)
+	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.preLaunchCheck(DSFDelegate.java:100)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:769)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SESSION 2024-12-14 17:16:21.204 -----------------------------------------------
+eclipse.buildId=Version 1.17.0
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:\Users\paran\Desktop\Wonder\STM32_Craft
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-12-14 17:16:25.478
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-12-14 17:16:25.479
+!MESSAGE Log4j2 initialized with config file C:\Users\paran\Desktop\Wonder\STM32_Craft\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-12-14 17:16:30.661
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.core.jobs 4 2 2024-12-14 17:16:41.989
+!MESSAGE An internal error occurred during: "Launching WS2812B_SPI_Control.elf".
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.eclipse.cdt.core.model.ICProject.getProject()" because the return value of "org.eclipse.cdt.debug.core.CDebugUtils.getCProject(org.eclipse.debug.core.ILaunchConfiguration)" is null
+	at com.st.stm32cube.ide.mcu.toolchain.ui.ToolChainHelper.validateDebugLaunch(ToolChainHelper.java:38)
+	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.preLaunchCheck(DSFDelegate.java:100)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:769)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 4 2 2024-12-14 17:17:07.352
+!MESSAGE An internal error occurred during: "Launching WS2812B_SPI_Control.elf".
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.eclipse.cdt.core.model.ICProject.getProject()" because the return value of "org.eclipse.cdt.debug.core.CDebugUtils.getCProject(org.eclipse.debug.core.ILaunchConfiguration)" is null
+	at com.st.stm32cube.ide.mcu.toolchain.ui.ToolChainHelper.validateDebugLaunch(ToolChainHelper.java:38)
+	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.preLaunchCheck(DSFDelegate.java:100)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:769)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 4 2 2024-12-14 17:17:18.977
+!MESSAGE An internal error occurred during: "Launching WS2812B_SPI_Control.elf".
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.eclipse.cdt.core.model.ICProject.getProject()" because the return value of "org.eclipse.cdt.debug.core.CDebugUtils.getCProject(org.eclipse.debug.core.ILaunchConfiguration)" is null
+	at com.st.stm32cube.ide.mcu.toolchain.ui.ToolChainHelper.validateDebugLaunch(ToolChainHelper.java:38)
+	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.preLaunchCheck(DSFDelegate.java:100)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:769)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 4 2 2024-12-14 17:18:24.817
+!MESSAGE An internal error occurred during: "Launching WS2812B_SPI_Control.elf".
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.eclipse.cdt.core.model.ICProject.getProject()" because the return value of "org.eclipse.cdt.debug.core.CDebugUtils.getCProject(org.eclipse.debug.core.ILaunchConfiguration)" is null
+	at com.st.stm32cube.ide.mcu.toolchain.ui.ToolChainHelper.validateDebugLaunch(ToolChainHelper.java:38)
+	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.preLaunchCheck(DSFDelegate.java:100)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:769)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 4 2 2024-12-14 17:18:35.328
+!MESSAGE An internal error occurred during: "Launching WS2812B_SPI_Control.elf".
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.eclipse.cdt.core.model.ICProject.getProject()" because the return value of "org.eclipse.cdt.debug.core.CDebugUtils.getCProject(org.eclipse.debug.core.ILaunchConfiguration)" is null
+	at com.st.stm32cube.ide.mcu.toolchain.ui.ToolChainHelper.validateDebugLaunch(ToolChainHelper.java:38)
+	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.preLaunchCheck(DSFDelegate.java:100)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:769)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 4 2 2024-12-14 17:18:52.085
+!MESSAGE An internal error occurred during: "Launching WS2812B_SPI_Control.elf".
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.eclipse.cdt.core.model.ICProject.getProject()" because the return value of "org.eclipse.cdt.debug.core.CDebugUtils.getCProject(org.eclipse.debug.core.ILaunchConfiguration)" is null
+	at com.st.stm32cube.ide.mcu.toolchain.ui.ToolChainHelper.validateDebugLaunch(ToolChainHelper.java:38)
+	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.preLaunchCheck(DSFDelegate.java:100)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:769)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SESSION 2024-12-14 17:19:10.960 -----------------------------------------------
+eclipse.buildId=Version 1.17.0
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-12-14 17:19:15.070
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-12-14 17:19:15.071
+!MESSAGE Log4j2 initialized with config file C:\Users\paran\Desktop\Wonder\STM32_Craft\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-12-14 17:19:20.393
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.core.jobs 4 2 2024-12-14 17:19:26.213
+!MESSAGE An internal error occurred during: "Launching WS2812B_SPI_Control.elf".
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.eclipse.cdt.core.model.ICProject.getProject()" because the return value of "org.eclipse.cdt.debug.core.CDebugUtils.getCProject(org.eclipse.debug.core.ILaunchConfiguration)" is null
+	at com.st.stm32cube.ide.mcu.toolchain.ui.ToolChainHelper.validateDebugLaunch(ToolChainHelper.java:38)
+	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.preLaunchCheck(DSFDelegate.java:100)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:769)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 4 2 2024-12-14 17:20:53.759
+!MESSAGE An internal error occurred during: "Launching WS2812B_SPI_Control.elf".
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.eclipse.cdt.core.model.ICProject.getProject()" because the return value of "org.eclipse.cdt.debug.core.CDebugUtils.getCProject(org.eclipse.debug.core.ILaunchConfiguration)" is null
+	at com.st.stm32cube.ide.mcu.toolchain.ui.ToolChainHelper.validateDebugLaunch(ToolChainHelper.java:38)
+	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.preLaunchCheck(DSFDelegate.java:100)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:769)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SESSION 2024-12-14 17:21:12.496 -----------------------------------------------
+eclipse.buildId=Version 1.17.0
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-12-14 17:21:16.794
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-12-14 17:21:16.795
+!MESSAGE Log4j2 initialized with config file C:\Users\paran\Desktop\Wonder\STM32_Craft\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-12-14 17:21:22.808
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.core.jobs 4 2 2024-12-14 17:21:30.504
+!MESSAGE An internal error occurred during: "Launching WS2812B_SPI_Control.elf".
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.eclipse.cdt.core.model.ICProject.getProject()" because the return value of "org.eclipse.cdt.debug.core.CDebugUtils.getCProject(org.eclipse.debug.core.ILaunchConfiguration)" is null
+	at com.st.stm32cube.ide.mcu.toolchain.ui.ToolChainHelper.validateDebugLaunch(ToolChainHelper.java:38)
+	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.preLaunchCheck(DSFDelegate.java:100)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:769)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 4 2 2024-12-14 17:22:23.626
+!MESSAGE An internal error occurred during: "Launching WS2812B_SPI_Control.elf".
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.eclipse.cdt.core.model.ICProject.getProject()" because the return value of "org.eclipse.cdt.debug.core.CDebugUtils.getCProject(org.eclipse.debug.core.ILaunchConfiguration)" is null
+	at com.st.stm32cube.ide.mcu.toolchain.ui.ToolChainHelper.validateDebugLaunch(ToolChainHelper.java:38)
+	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.preLaunchCheck(DSFDelegate.java:100)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:769)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 4 2 2024-12-14 17:22:38.705
+!MESSAGE An internal error occurred during: "Launching WS2812B_SPI_Control.elf".
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.eclipse.cdt.core.model.ICProject.getProject()" because the return value of "org.eclipse.cdt.debug.core.CDebugUtils.getCProject(org.eclipse.debug.core.ILaunchConfiguration)" is null
+	at com.st.stm32cube.ide.mcu.toolchain.ui.ToolChainHelper.validateDebugLaunch(ToolChainHelper.java:38)
+	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.preLaunchCheck(DSFDelegate.java:100)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:769)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 0 2024-12-14 17:22:53.180
+!MESSAGE Unexpected error loading extension: org.eclipse.equinox.p2.metadata.repository.compositeRepository
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.eclipse.equinox.internal.p2.repository.Transport.download(java.net.URI, java.io.OutputStream, org.eclipse.core.runtime.IProgressMonitor)" because the return value of "org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.getTransport()" is null
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.handleRemoteIndexFile(AbstractRepositoryManager.java:742)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadIndexFile(AbstractRepositoryManager.java:736)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:678)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:161)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:93)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:124)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:791)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:689)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:161)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:93)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:124)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:791)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:689)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:161)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:93)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:124)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:791)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:689)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:152)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:130)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:78)
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2024-12-14 17:22:53.184
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: No repository found at https://sw-center.st.com/stm32cubeide/toolchains/10.3-2021.10.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:409)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:713)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:161)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:93)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:124)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:791)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:689)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:161)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:93)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:124)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:791)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:689)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:152)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:130)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:78)
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2024-12-14 17:22:53.186
+!MESSAGE No repository found at https://sw-center.st.com/stm32cubeide/toolchains/10.3-2021.10.
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2024-12-14 17:22:53.188
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: Unable to read repository at https://sw-center.st.com/stm32cubeide/toolchains.
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:180)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:93)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:124)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:791)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:689)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:161)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:93)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:124)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:791)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:689)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:152)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:130)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:78)
+Caused by: org.eclipse.equinox.p2.core.ProvisionException: No repository found at https://sw-center.st.com/stm32cubeide/toolchains/10.3-2021.10.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:409)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:713)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:161)
+	... 18 more
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1002 2024-12-14 17:22:53.188
+!MESSAGE Unable to read repository at https://sw-center.st.com/stm32cubeide/toolchains.
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: No repository found at https://sw-center.st.com/stm32cubeide/toolchains/10.3-2021.10.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:409)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:713)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:161)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:93)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:124)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:791)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:689)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:161)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:93)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:124)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:791)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:689)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:152)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:130)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:78)
+!SUBENTRY 2 org.eclipse.equinox.p2.metadata.repository 4 1000 2024-12-14 17:22:53.189
+!MESSAGE No repository found at https://sw-center.st.com/stm32cubeide/toolchains/10.3-2021.10.
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1002 2024-12-14 17:22:53.189
+!MESSAGE Unable to read repository at https://sw-center.st.com/stm32cubeide/updatesite1.
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: Unable to read repository at https://sw-center.st.com/stm32cubeide/toolchains.
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:180)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:93)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:124)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:791)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:689)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:161)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:93)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:124)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:791)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:689)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:152)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:130)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:78)
+Caused by: org.eclipse.equinox.p2.core.ProvisionException: No repository found at https://sw-center.st.com/stm32cubeide/toolchains/10.3-2021.10.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:409)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:713)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:161)
+	... 18 more
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1002 2024-12-14 17:22:53.189
+!MESSAGE Unable to read repository at https://sw-center.st.com/stm32cubeide/toolchains.
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: No repository found at https://sw-center.st.com/stm32cubeide/toolchains/10.3-2021.10.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:409)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:713)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:161)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:93)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:124)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:791)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:689)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:161)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:93)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:124)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:791)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:689)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:152)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:130)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:78)
+!SUBENTRY 2 org.eclipse.equinox.p2.metadata.repository 4 1000 2024-12-14 17:22:53.189
+!MESSAGE No repository found at https://sw-center.st.com/stm32cubeide/toolchains/10.3-2021.10.
+
+!ENTRY org.eclipse.equinox.p2.updatechecker 4 0 2024-12-14 17:22:53.190
+!MESSAGE Exception in update check thread
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.eclipse.equinox.internal.p2.repository.Transport.download(java.net.URI, java.io.OutputStream, org.eclipse.core.runtime.IProgressMonitor)" because the return value of "org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.getTransport()" is null
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.handleRemoteIndexFile(AbstractRepositoryManager.java:742)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadIndexFile(AbstractRepositoryManager.java:736)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:678)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:152)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:130)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:78)
+!SESSION 2024-12-14 17:22:53.949 -----------------------------------------------
+eclipse.buildId=Version 1.17.0
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:\Users\paran\Desktop\Wonder\STM32_Craft
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-12-14 17:22:58.188
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-12-14 17:22:58.189
+!MESSAGE Log4j2 initialized with config file C:\Users\paran\Desktop\Wonder\STM32_Craft\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-12-14 17:23:03.323
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.core.jobs 4 2 2024-12-14 17:23:07.480
+!MESSAGE An internal error occurred during: "Launching WS2812B_SPI_Control.elf".
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.eclipse.cdt.core.model.ICProject.getProject()" because the return value of "org.eclipse.cdt.debug.core.CDebugUtils.getCProject(org.eclipse.debug.core.ILaunchConfiguration)" is null
+	at com.st.stm32cube.ide.mcu.toolchain.ui.ToolChainHelper.validateDebugLaunch(ToolChainHelper.java:38)
+	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.preLaunchCheck(DSFDelegate.java:100)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:769)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SESSION 2024-12-14 17:25:05.527 -----------------------------------------------
+eclipse.buildId=Version 1.17.0
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-12-14 17:25:35.415
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-12-14 17:25:35.416
+!MESSAGE Log4j2 initialized with config file C:\Users\paran\Desktop\Wonder\STM32_Craft\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-12-14 17:25:44.482
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.core.jobs 4 2 2024-12-14 17:25:51.818
+!MESSAGE An internal error occurred during: "Launching WS2812B_SPI_Control.elf".
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.eclipse.cdt.core.model.ICProject.getProject()" because the return value of "org.eclipse.cdt.debug.core.CDebugUtils.getCProject(org.eclipse.debug.core.ILaunchConfiguration)" is null
+	at com.st.stm32cube.ide.mcu.toolchain.ui.ToolChainHelper.validateDebugLaunch(ToolChainHelper.java:38)
+	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.preLaunchCheck(DSFDelegate.java:100)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:769)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1040)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1243)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)

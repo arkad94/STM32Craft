@@ -1,8 +1,9 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:STM32Craft.elf,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:ws2812b_try Debug
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:STM32Craft.elf,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:WS2812B_SPI_Control.elf
 eclipse.preferences.version=1
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:STM32Craft.elf/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:STM32Craft.elf/activeLaunchTarget=null\:---
-org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:ws2812b_try\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:WS2812B_SPI_Control.elf/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:ws2812b_try\ Debug/activeLaunchMode=debug
